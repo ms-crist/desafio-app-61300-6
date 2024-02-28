@@ -1,0 +1,99 @@
+[
+    {
+      "id": "1",
+      "title": "iPhone 12",
+      "price": "999",
+      "category": "Teléfono inteligente",
+      "brand": "Apple",
+      "images": "https://i.dummyjson.com/data/products/2/1.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Galaxy S21",
+      "price": "799",
+      "category": "Teléfono inteligente",
+      "brand": "Samsung",
+      "images": "https://i.dummyjson.com/data/products/3/1.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Pixel 5",
+      "price": "699",
+      "category": "Teléfono inteligente",
+      "brand": "Google",
+      "images": "https://i.dummyjson.com/data/products/4/1.jpg"
+    },
+    {
+      "id": "4",
+      "title": "OnePlus 9",
+      "price": "729",
+      "category": "Teléfono inteligente",
+      "brand": "OnePlus",
+      "images": "https://i.dummyjson.com/data/products/4/2.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Mi 11",
+      "price": "699",
+      "category": "Teléfono inteligente",
+      "brand": "Xiaomi",
+      "images": "https://i.dummyjson.com/data/products/4/3.jpg"
+    },
+    {
+      "id": "6",
+      "title": "ROG Phone 5",
+      "price": "999",
+      "category": "Teléfono inteligente",
+      "brand": "Asus",
+      "images": "https://i.dummyjson.com/data/products/4/4.jpg"
+    },
+  {
+    "id": "7",
+    "title": "Dell XPS 13",
+    "price": "1099",
+    "category": "Ordenador portátil",
+    "brand": "Dell",
+    "images": "https://i.dummyjson.com/data/products/7/1.jpg"
+  },
+  {
+    "id": "8",
+    "title": "MacBook Pro",
+    "price": "1299",
+    "category": "Ordenador portátil",
+    "brand": "Apple",
+    "images": "https://i.dummyjson.com/data/products/6/1.png"
+  },
+  {
+    "id": "9",
+    "title": "HP Spectre x360",
+    "price": "999",
+    "category": "Ordenador portátil",
+    "brand": "HP",
+    "images": "https://i.dummyjson.com/data/products/6/3.png"
+  },
+  {
+    "id": "10",
+    "title": "Lenovo ThinkPad X1 Carbon",
+    "price": "1499",
+    "category": "Ordenador portátil",
+    "brand": "Lenovo",
+    "images": "https://i.dummyjson.com/data/products/8/1.jpg"
+  },
+  {
+    "id": "11",
+    "title": "Asus ZenBook 14",
+    "price": "899",
+    "category": "Ordenador portátil",
+    "brand": "Asus",
+    "images": "https://i.dummyjson.com/data/products/9/1.jpg"
+  },
+  {
+    "id": "12",
+    "title": "Acer Swift 3",
+    "price": "699",
+    "category": "Ordenador portátil",
+    "brand": "Acer",
+    "images": "https://i.dummyjson.com/data/products/9/2.png"
+  }
+]
+    
