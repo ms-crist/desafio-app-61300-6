@@ -5,6 +5,7 @@ import Search from "../components/Search";
 import { AntDesign } from '@expo/vector-icons';
 import { colors } from "../global/colors";
 import { useSelector } from "react-redux";
+import { useGetProductsByCategoryQuery } from "../services/shopService";
 
 
 
@@ -14,15 +15,23 @@ import { useSelector } from "react-redux";
 function ItemListCategories({ navigation  }) {
   const [products, setProducts] = useState([]);
   const [keyword, setKeyword] = useState("");
-  const productsFilteredByCategory = useSelector(
+  /* const productsFilteredByCategory = useSelector(
     (state) => state.shopReducer.value.productsFilteredByCategory
-  );
+  ); */
+
+  const category = useSelector((state)=> state.shopReducer.value.categorySelected );
+  const {data: productsFilteredByCategory, isLoading, error} = useGetProductsByCategoryQuery(category)
 
   useEffect(() => {
-    const productsFiltered = productsFilteredByCategory.filter((product)=> product.title.includes(keyword))
-    setProducts(productsFiltered)
-  }, [productsFilteredByCategory, keyword]);
-
+    console.log(productsFilteredByCategory);
+    if (productsFilteredByCategory) {
+        const productsRaw = Object.values(productsFilteredByCategory)
+        const productsFiltered = productsRaw.filter((product) =>
+            product.title.includes(keyword)
+        );
+        setProducts(productsFiltered);
+    }
+}, [productsFilteredByCategory, keyword]);
 
   return (
     <View style={styles.container}>

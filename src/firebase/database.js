@@ -1,0 +1,1 @@
+export const base_url = "https://desafio-app-73801-default-rtdb.firebaseio.com/"
