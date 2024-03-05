@@ -12,7 +12,6 @@ import { fonts } from "../global/fonts";
 const TabNavigator = () => {
   const Tab = createBottomTabNavigator();
   return (
-    <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
           headerShown: false,
@@ -63,7 +62,6 @@ const TabNavigator = () => {
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 };
 

@@ -6,6 +6,7 @@ import { shopApi } from "../services/shopService";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { authApi } from "../services/authService";
 
+
 export default configureStore({
   reducer: {
     shopReducer,

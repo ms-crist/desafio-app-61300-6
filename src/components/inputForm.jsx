@@ -1,10 +1,12 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import React, {useState} from "react";
-import { fonts } from "../global/fonts";
+import { colors } from "../global/colors";
+
+
 
 
 const InputForm = ({label, error, onChange, isSecure}) => {
-    const {input, setInput} = useState("");
+    const [input, setInput] = useState("");
 
     const onChangeText = (text) => {
         setInput(text);
@@ -22,9 +24,8 @@ const InputForm = ({label, error, onChange, isSecure}) => {
             />
             {error ? <Text style={styles.error}>{error}</Text>: null}
         </View>
-    );
-    
-    };
+    )
+    }
 
     export default InputForm;
 

@@ -12,7 +12,7 @@ const CategoryItem = ({ category, navigation }) => {
     <Card style={{ marginVertical: 20}}>
       <MaterialCommunityIcons style={{marginLeft: 10}} name="monitor-cellphone" size={80} color="black" />
       <Pressable onPress={() =>{ dispatch(setCategorySelected(category)) 
-        navigation.navigate("ItemListCategories", {category})
+        navigation.navigate("ItemListCategories", {category});
         }}>
         <Text style={styles.text}>{category}</Text>
       </Pressable>
