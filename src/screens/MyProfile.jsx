@@ -28,7 +28,7 @@ const MyProfile = ({ navigation }) => {
         style={styles.button}
         onPress={() => navigation.navigate("Image Selector")}
       >
-        <Text style={styles.text}>Add profile picture</Text>
+        <Text style={styles.text}>Tomar foto perfil</Text>
       </Pressable>
     </View>
   );
