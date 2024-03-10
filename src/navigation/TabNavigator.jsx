@@ -7,6 +7,8 @@ import { colors } from "../global/colors";
 import { MaterialCommunityIcons, Octicons, FontAwesome, Fontisto } from "@expo/vector-icons";
 import OrdersStack from "./OrdersStack";
 import { fonts } from "../global/fonts";
+import MyProfileStack from "./MyProfileStack";
+
 
 
 const TabNavigator = () => {
@@ -61,6 +63,20 @@ const TabNavigator = () => {
             },
           }}
         />
+        <Tab.Screen
+        name="MyProfileStack"
+        component={MyProfileStack}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <View style={styles.tabContainer}>
+                <Octicons name="feed-person" size={30} color={focused ? "white" : "black"} />
+                <Text style={{ color: focused ? "white" : "black"}}>Perfil</Text>
+              </View>
+            );
+          },
+        }}
+      />
       </Tab.Navigator>
   );
 };
