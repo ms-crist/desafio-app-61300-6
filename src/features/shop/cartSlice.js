@@ -1,5 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+/* 
+Este bloque de código está creando un segmento para administrar el estado del carrito de compras en una tienda Redux usando 
+Redux Toolkit.*/
 export const cartSlice = createSlice({
   name: "cart",
   initialState: {

@@ -4,6 +4,12 @@ import { colors } from "../global/colors";
 
 
 
+/**
+ * 
+ * La función Home renderiza un componente View que contiene el componente Categories con un prop de navegación.
+ * @returns Regresa un componente View con un estilo de styles.container.
+ * 
+ */
 function Home({navigation}) {
   return (
     <View style={styles.container}>

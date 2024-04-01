@@ -9,6 +9,13 @@ import { loginSchema } from "../validations/loginSchema";
 import { colors } from "../global/colors";
 
 
+/** 
+ * * El componente 'Login' maneja la funcionalidad de inicio de sesión del usuario, incluido el formulario de ingreso de datos,
+ * la validación y activación del login mutation.
+ * @returns Devuelve el componente 'Login'. Consiste en una vista que contiene un elemento de texto
+ * para loguearse en el sistema, dos formularios de entrada para correo electrónico y contraseña con manejo de errores, un pressable para
+ * navegar a la pantalla de registro y un botón de envío basado en el estado de carga del resultado del login mutation.
+ */
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [errorMail, setErrorMail] = useState("");
@@ -19,7 +26,6 @@ const Login = ({ navigation }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log(result);
     if (result.data) {
       dispatch(setUser(result.data));
     }
@@ -57,7 +63,7 @@ const Login = ({ navigation }) => {
         <Text>Ir al registro</Text>
       </Pressable>
       {result.isLoading ? (
-        <ActivityIndicator size="large" color="#0000ff" />
+        <ActivityIndicator size="large" color="#00ff00" />
       ) : (
         <SubmitButton title={"Login"} onPress={onSubmit} />
       )}

@@ -3,8 +3,11 @@ import React, { useState } from "react";
 import { colors } from "../global/colors";
 import { useSelector } from "react-redux";
 
+/* 
+* El componente 'MyProfile' es un componente funcional que muestra la imagen de perfil de un usuario.
+Además muestra un botón que permite al usuario elegir tomar una nueva foto de perfil */
+
 const MyProfile = ({ navigation }) => {
-  //const image = useSelector((state) => state.authReducer.imageCamera)
   const { profileImage, imageCamera } = useSelector((state) => state.authReducer.value);
 
   return (

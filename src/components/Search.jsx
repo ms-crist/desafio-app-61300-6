@@ -5,17 +5,24 @@ import { Entypo } from "@expo/vector-icons";
 import { colors } from "../global/colors";
 
 
+/**
+ * Este componente de búsqueda permite a los usuarios ingresar una consulta de búsqueda, realizar una búsqueda y
+ * borrar el campo de entrada.
+ * @returns Devuelve el componente Buscar. Consiste en una vista que contiene un campo de búsqueda de productos,
+ *  un icono de búsqueda (AntDesign) y un icono para eliminar lo escrito en el campo de entrada (Entypo). El usuario puede ingresar
+ * texto en el campo de búsqueda, hacer clic en el icono para activar la función de búsqueda y clickear en el botón
+ * eliminar para borrar el campo de texto.
+ * 
+ */
 const Search = ({ onSearch }) => {
   const [input, setInput] = useState("");
 
-  // handleSearch va a realizar un filtrado de los productos utilizando el valor guardado en "input"
   const handleSearch = () => {
     if (input) {
       onSearch(input);
     }
   };
 
-  //funcion que limpia el campo del input
   const removeInput = () => {
     setInput("");
   };

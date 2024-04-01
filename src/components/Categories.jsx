@@ -1,14 +1,13 @@
 import { FlatList, View, StyleSheet } from "react-native";
-import categories from "../data/categories.json";
 import CategoryItem from "./CategoryItem";
-import { useSelector } from "react-redux";
 import { useGetCategoriesQuery } from "../services/shopService";
 
+/* Este código define un componente funcional llamado 'Categories' que toma una propiedad de 'navegación'. Dentro
+del componente, se utiliza el hook 'useGetCategoriesQuery' para obtener datos, estado de carga y estado de error
+relacionado con las categorías.
 
-
-
+*/
 function Categories({ navigation }) {
-  //const categories = useSelector((state) => state.shopReducer.value.categories);
 
   const {data, isLoading, error} = useGetCategoriesQuery()
 

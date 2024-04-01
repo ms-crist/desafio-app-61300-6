@@ -1,15 +1,16 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
 import ShopStack from "../navigation/ShopStack";
 import CartStack from "./CartStack";
 import { StyleSheet, Text, View } from "react-native";
 import { colors } from "../global/colors";
-import { MaterialCommunityIcons, Octicons, FontAwesome, Fontisto } from "@expo/vector-icons";
+import { MaterialCommunityIcons, Octicons, Fontisto } from "@expo/vector-icons";
 import OrdersStack from "./OrdersStack";
-import { fonts } from "../global/fonts";
 import MyProfileStack from "./MyProfileStack";
 
 
+/* Este fragmento de código define un componente funcional llamado 'TabNavigator' que crea una pestaña inferior
+navegación mediante la función 'createBottomTabNavigator' con las pantallas Tienda, Carrito, 
+Órdenes y perfil */
 
 const TabNavigator = () => {
   const Tab = createBottomTabNavigator();

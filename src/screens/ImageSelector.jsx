@@ -7,6 +7,13 @@ import { usePostProfileImageMutation } from "../services/shopService";
 import { colors } from "../global/colors";
 
 
+/**
+ * El componente ImageSelector permite a los usuarios tomar y confirmar imágenes de perfil con 
+ * verificación de los permisos de la cámara.
+ * @returns Devuelve el componente 'ImageSelector', que contiene lógica para seleccionar y
+ * confirmar una imagen de la cámara, mostrar la imagen seleccionada y proporcionar opciones para tomar
+ * otra foto o confirmar la foto actual.
+ */
 const ImageSelector = ({ navigation }) => {
   const [image, setImage] = useState(null);
   const { localId } = useSelector((state) => state.authReducer.value);
@@ -50,7 +57,7 @@ const ImageSelector = ({ navigation }) => {
         <>
           <Image source={{ uri: image }} style={styles.image} />
           <Pressable onPress={pickImage}>
-            <Text>Tomar otra foto</Text>
+            <Text style={styles.button}>Tomar otra foto</Text>
           </Pressable>
           <Pressable onPress={confirmImage}>
             <Text style={styles.button}>Confirmar foto</Text>

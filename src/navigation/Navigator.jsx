@@ -5,6 +5,16 @@ import ItemDetail from "../screens/ItemDetail";
 import ItemListCategories from "../screens/ItemListCategories";
 import Header from "../components/Header";
 
+/**
+ * /**
+ * El componente Navigator configura un stack navigator en una aplicación React Native con diferentes pantallas y
+ * títulos de encabezado personalizados basados en la ruta.
+ * @returns devuelve un componente de Navigator. Dentro de NavigationContainer, hay un
+ * Stack.Navigator con initialRouteName establecido en "Home" y screenOptions definido para personalizar el
+ * encabezado basado en el nombre de la ruta. Se definen tres componentes de Stack.Screen para las rutas "Home",
+ * "ItemDetail" y "ItemListCategories".
+ */
+
 const Navigator = () => {
   const Stack = createNativeStackNavigator();
 

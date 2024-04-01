@@ -1,8 +1,16 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import React from "react";
 import { colors } from "../global/colors";
 colors
 
+/**
+ * 
+ * El componente Card renderiza al componente hijo dentro de un componente View con estilos.
+ *
+ * @returns Devuelve un componente Card, que representa un componente View con elementos secundarios
+ * en su interior. La propiedad style se extiende en el objeto styles.container al que se le aplica un estilo adicional
+ * al componente Vista.
+ */
 const Card = ({children, style}) => {
   return (
     <View style={{...styles.container, ...style}}>

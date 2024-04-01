@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+/* /* Este fragmento de código está creando una porción del estado de Redux para manejar datos relacionados con la autenticación y también 
+se maneja lo relacionado al almacenamiento de la imagen de perfil y la imagen tomada con la cámara del celular. */ 
 export const authSlice = createSlice({
   name: "auth",
   initialState: {

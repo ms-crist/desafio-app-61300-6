@@ -9,21 +9,18 @@ import { useGetProductsByCategoryQuery } from "../services/shopService";
 
 
 
-
-
+/* 
+/* Este código define un componente funcional denominado 'ItemListCategories' que muestra una lista de productos
+filtrado por una categoría específica y muestra un cuadro de búsqueda de productos.  */
 
 function ItemListCategories({ navigation  }) {
   const [products, setProducts] = useState([]);
   const [keyword, setKeyword] = useState("");
-  /* const productsFilteredByCategory = useSelector(
-    (state) => state.shopReducer.value.productsFilteredByCategory
-  ); */
 
   const category = useSelector((state)=> state.shopReducer.value.categorySelected );
   const {data: productsFilteredByCategory, isLoading, error} = useGetProductsByCategoryQuery(category)
 
   useEffect(() => {
-    console.log(productsFilteredByCategory);
     if (productsFilteredByCategory) {
         const productsRaw = Object.values(productsFilteredByCategory)
         const productsFiltered = productsRaw.filter((product) =>

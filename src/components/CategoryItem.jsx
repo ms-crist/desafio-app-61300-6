@@ -4,8 +4,11 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useDispatch } from "react-redux";
 import { setCategorySelected } from "../features/shop/shopSlice";
 
+/* 
+Este código define un componente funcional denominado 'CategoryItem' que toma dos props, 'category' y
+'navegación'. Dentro del componente, utiliza el hook 'useDispatch' de Redux para obtener la función 'dispatch'.
 
-
+*/
 const CategoryItem = ({ category, navigation }) => {
   const dispatch = useDispatch()
   return (

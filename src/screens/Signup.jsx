@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View} from "react-native";
+import {StyleSheet, Text, View} from "react-native";
 import React, { useEffect, useState } from "react";
 import InputForm from "../components/inputForm";
 import { colors } from "../global/colors";
@@ -19,25 +19,22 @@ const Signup = () => {
   const [errorConfirmPassword, setErrorConfirmPassword] = useState("");
   const [triggerSignup, result] = useSignUpMutation();
 
+  /*
+  Este fragmento de código es un componente funcional que representa un formulario de registro que tiene manejo de errores,
+  en los formularios y al enviar la información a través de un dispatch de redux */
+
+  
   const dispatch = useDispatch();
-
-    //console.log(result);
-
     const onSubmit = () => {
-        console.log("mail", errorMail);
-        console.log("password", errorPassword);
-        console.log("confirmPassword", errorConfirmPassword);
+        
         try {
-            //limpiamos los errores cada vez que ejecutamos el Register
       setErrorMail("");
       setErrorPassword("");
       setErrorConfirmPassword("");
 
       signupSchema.validateSync({ password, confirmPassword, email });
       triggerSignup({ email, password });
-      console.log("Registro exitoso");
         } catch (err) {
-            console.log("path", err.path);
             switch (err.path) {
               case "email":
                 setErrorMail(err.message);

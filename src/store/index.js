@@ -7,6 +7,10 @@ import { setupListeners } from "@reduxjs/toolkit/query";
 import { authApi } from "../services/authService";
 
 
+/* 
+Este fragmento de código configura un Redux store mediante Redux Toolkit 
+que sirve para manejar estados en una aplicación. */
+
 export default configureStore({
   reducer: {
     shopReducer,

@@ -3,6 +3,12 @@ import { colors } from "../global/colors";
 import { AntDesign } from "@expo/vector-icons";
 
 
+/**
+ * El componente Footer en una aplicación React Native muestra información de derechos reservados para una PC Store con 
+ * iconos y texto.
+ * @returns Un componente de vista que contiene un icono de AntDesign con el nombre "infocirlceo", de un tamaño de 24,
+ * y color blanco, junto con un componente de texto que muestra el texto "© 2024 PC Store".
+ */
 function Footer() {
   return (
     <View style={styles.container}>

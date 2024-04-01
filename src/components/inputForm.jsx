@@ -5,6 +5,13 @@ import { colors } from "../global/colors";
 
 
 
+/**
+ * * El componente InputForm es un componente de formulario reutilizable que incluye una
+ * etiqueta, manejo de errores y opción de entrada de texto segura.
+ * @returns Devuelve el componente 'InputForm'. Consiste en una vista que contiene un componente de texto
+ * para la etiqueta, un componente TextInput para la entrada de de datos por parte del usuario y un componente Text para mostrar
+ * cualquier mensaje de error.
+ */
 const InputForm = ({label, error, onChange, isSecure}) => {
     const [input, setInput] = useState("");
 

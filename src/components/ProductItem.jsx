@@ -3,6 +3,14 @@ import Card from "./Card";
 
 
 
+/**
+ * El componente ProductItem renderiza una tarjeta con información del producto y una imagen, permitiendo la navegación
+ * a la pantalla ItemDetail.
+ * @returns Se devuelve el componente 'ProductItem', el cual muestra un componente 'Card' que contiene
+ * el título y la imagen del producto. Todo el contenido está envuelto en un componente 'Pressable' que al presionarlo
+ * navega a la pantalla "ItemDetail" con el ID del producto.
+ * 
+ */
 const ProductItem = ({product, navigation}) => {
   return (
     <><Pressable style={styles.card} onPress={() => navigation.navigate("ItemDetail", { id: product.id })}><Card>

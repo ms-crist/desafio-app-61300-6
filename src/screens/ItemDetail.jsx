@@ -8,8 +8,9 @@ import Footer from "../components/FooterApp";
 import { useDispatch } from "react-redux";
 import { addItem } from "../features/shop/cartSlice";
 
-
-
+/* Este código define un componente funcional llamado 'ItemDetail' que toma 'navigation' y 'route' como
+props. @returns Muestra el detalle del producto dónde se hizo click(título, marca. precio) 
+y un botón para comprar */
 
 const ItemDetail = ({ navigation, route }) => {
   const [product, setProduct] = useState(null);

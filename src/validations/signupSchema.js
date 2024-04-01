@@ -1,5 +1,9 @@
 import { object, string, ref } from "yup";
 
+/* 
+ Este fragmento de código define un esquema de validación para un formulario de 
+ registro mediante la biblioteca Yup */
+
 export const signupSchema = object().shape({
   email: string().required("Email es campo obligatorio").email("No es un email válido"),
   password: string()

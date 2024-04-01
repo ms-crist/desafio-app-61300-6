@@ -3,7 +3,9 @@ import { colors } from "../global/colors";
 import { Entypo } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-
+/* Esta función 'Header' es un componente de React Native que renderiza un encabezado personalizado para una aplicación móvil.
+Toma una propiedad de 'título' como entrada y la muestra en el encabezado junto con algunos iconos. 
+*/
 function Header({ title }) {
   return (
     <View style={styles.container}>
