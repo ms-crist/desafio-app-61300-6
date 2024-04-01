@@ -35,10 +35,12 @@ const Cart = () => {
         renderItem={({ item }) => <CartItem item={item} />}
         keyExtractor={(cartItem) => cartItem.id}
       />
-        <Text>Total: ${total}</Text>
+      <View style={styles.confirmContainer}>
+        <Text style={styles.confirmText}>Total: ${total}</Text>
         <Pressable onPress={confirmCart}>
-            <Text>Confirmar</Text>
+            <Text style={styles.confirmText}>Confirmar</Text>
           </Pressable>
+          </View>
 </>
  ) : (
   <Text>No hay productos agregados</Text>
@@ -66,8 +68,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     backgroundColor: colors.green_400, 
+    fontSize: 20, 
     padding: 15,
-    width: "70%"
+    width: "70%",
   }, 
   confirmText: {
     fontFamily: "PoppinsRegular",
