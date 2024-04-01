@@ -41,6 +41,7 @@ const Cart = () => {
             <Text style={styles.confirmText}>Confirmar</Text>
           </Pressable>
           </View>
+          
 </>
  ) : (
   <Text>No hay productos agregados</Text>
