@@ -5,7 +5,7 @@
       "price": "999",
       "category": "Teléfono inteligente",
       "brand": "Apple",
-      "images": "https://i.dummyjson.com/data/products/2/1.jpg"
+      "images": "https://picsum.photos/id/160/200"
     },
     {
       "id": "2",
@@ -13,7 +13,7 @@
       "price": "799",
       "category": "Teléfono inteligente",
       "brand": "Samsung",
-      "images": "https://i.dummyjson.com/data/products/3/1.jpg"
+      "images": "https://picsum.photos/id/816/200"
     },
     {
       "id": "3",
@@ -21,7 +21,7 @@
       "price": "699",
       "category": "Teléfono inteligente",
       "brand": "Google",
-      "images": "https://i.dummyjson.com/data/products/4/1.jpg"
+      "images": "https://picsum.photos/id/160/200"
     },
     {
       "id": "4",
@@ -29,7 +29,7 @@
       "price": "729",
       "category": "Teléfono inteligente",
       "brand": "OnePlus",
-      "images": "https://i.dummyjson.com/data/products/4/2.jpg"
+      "images":  "https://picsum.photos/id/816/200"
     },
     {
       "id": "5",
@@ -37,7 +37,7 @@
       "price": "699",
       "category": "Teléfono inteligente",
       "brand": "Xiaomi",
-      "images": "https://i.dummyjson.com/data/products/4/3.jpg"
+      "images": "https://picsum.photos/id/160/200"
     },
     {
       "id": "6",
@@ -45,7 +45,7 @@
       "price": "999",
       "category": "Teléfono inteligente",
       "brand": "Asus",
-      "images": "https://i.dummyjson.com/data/products/4/4.jpg"
+      "images": "https://picsum.photos/id/816/200"
     },
   {
     "id": "7",
@@ -53,7 +53,7 @@
     "price": "1099",
     "category": "Ordenador portátil",
     "brand": "Dell",
-    "images": "https://i.dummyjson.com/data/products/7/1.jpg"
+    "images": "https://picsum.photos/id/0/200"
   },
   {
     "id": "8",
@@ -61,7 +61,7 @@
     "price": "1299",
     "category": "Ordenador portátil",
     "brand": "Apple",
-    "images": "https://i.dummyjson.com/data/products/6/1.png"
+    "images": "https://picsum.photos/id/1/200"
   },
   {
     "id": "9",
@@ -69,7 +69,7 @@
     "price": "999",
     "category": "Ordenador portátil",
     "brand": "HP",
-    "images": "https://i.dummyjson.com/data/products/6/3.png"
+    "images": "https://picsum.photos/id/2/200"
   },
   {
     "id": "10",
@@ -77,7 +77,7 @@
     "price": "1499",
     "category": "Ordenador portátil",
     "brand": "Lenovo",
-    "images": "https://i.dummyjson.com/data/products/8/1.jpg"
+    "images": "https://picsum.photos/id/3/200"
   },
   {
     "id": "11",
@@ -85,7 +85,7 @@
     "price": "899",
     "category": "Ordenador portátil",
     "brand": "Asus",
-    "images": "https://i.dummyjson.com/data/products/9/1.jpg"
+    "images": "https://picsum.photos/id/4/200"
   },
   {
     "id": "12",
@@ -93,7 +93,7 @@
     "price": "699",
     "category": "Ordenador portátil",
     "brand": "Acer",
-    "images": "https://i.dummyjson.com/data/products/9/2.png"
+    "images": "https://picsum.photos/id/5/200"
   }
 ]
     

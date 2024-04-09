@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../features/auth/authSlice";
 import { loginSchema } from "../validations/loginSchema";
 import { colors } from "../global/colors";
+import { insertSession } from "../db/";
 
 
 /** 
@@ -28,8 +29,16 @@ const Login = ({ navigation }) => {
   useEffect(() => {
     if (result.data) {
       dispatch(setUser(result.data));
+      insertSession({
+        email: result.data.email,
+        localId: result.data.localId,
+        token: result.data.idToken
+      })
+      .then((result) => console.log(result))
+      .catch(err => console.log(err.message))
     }
   }, [result]);
+
 
   const onSubmit = () => {
     try {
@@ -51,7 +60,7 @@ const Login = ({ navigation }) => {
 
   return (
     <View>
-      <Text>Login</Text>
+      <Text style={{marginTop: 30, marginBottom: 20, marginLeft: 20, fontSize: 30, fontWeight: 'bold'}}>Login</Text>
       <InputForm label={"Email"} error={errorMail} onChange={setEmail} />
       <InputForm
         label={"Password"}
@@ -59,7 +68,7 @@ const Login = ({ navigation }) => {
         onChange={setPassword}
         isSecure={true}
       />
-      <Pressable onPress={() => navigation.navigate("Signup")}>
+      <Pressable style={{marginTop: 30, marginBottom: 20, marginLeft: 20}} onPress={() => navigation.navigate("Signup")}>
         <Text>Ir al registro</Text>
       </Pressable>
       {result.isLoading ? (
@@ -91,7 +100,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     title: {
-        fontSize: 14,
+        fontSize: 60,
         fontFamily: 'PoppinsRegular',
         color: colors.white_200
     }

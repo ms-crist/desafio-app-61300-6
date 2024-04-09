@@ -8,6 +8,7 @@ import Footer from "../components/FooterApp";
 import { useDispatch } from "react-redux";
 import { addItem } from "../features/shop/cartSlice";
 
+
 /* Este código define un componente funcional llamado 'ItemDetail' que toma 'navigation' y 'route' como
 props. @returns Muestra el detalle del producto dónde se hizo click(título, marca. precio) 
 y un botón para comprar */
@@ -41,10 +42,11 @@ const ItemDetail = ({ navigation, route }) => {
         <View style={styles.main}>
           {product ? (
             <View style={styles.container}>
-              <Image
-                source={{ uri: product.images }}
-                style={styles.image}
-                resizeMode="cover" />
+            <Image
+            source={{ uri: product.images }}
+            style={styles.image}
+            resizeMode="cover"
+          />
               <View style={styles.textContainer}>
                 <Text style={styles.descriptionText}>{product.title}</Text>
                 <Text style={styles.descriptionText}>{product.brand}</Text>
@@ -81,9 +83,9 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   image: {
-    width: "30%",
-    height: 250,
-    marginVertical: 15,
+    marginTop: 50,
+    width: "50%",
+    height: "20%",
   },
   textContainer: {
     flexDirection: "column",

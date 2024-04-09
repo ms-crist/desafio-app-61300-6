@@ -4,8 +4,11 @@ import TabNavigator from "./TabNavigator";
 import AuthStack from "./AuthStack";
 import { NavigationContainer } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
-import { useGetProfileImageQuery } from "../services/shopService";
-import { setProfileImage } from "../features/auth/authSlice";
+import {
+  useGetProfileImageQuery
+} from "../services/shopService";
+import { setProfileImage, setUserLocation, setUser } from "../features/auth/authSlice";
+import { fetchSession } from "../db";
 
 /**
  * 
@@ -17,15 +20,35 @@ import { setProfileImage } from "../features/auth/authSlice";
  * están disponibles busca los datos de la imagen y envía una acción para establecer la imagen de perfil.
  */
 const MainNavigator = () => {
-  const {user, localId} = useSelector(state => state.authReducer.value)
-  const {data, error, isLoading} = useGetProfileImageQuery(localId)
+  const { user, localId } = useSelector((state) => state.authReducer.value);
+  const { data, error, isLoading } = useGetProfileImageQuery(localId);
+  
+
   const dispatch = useDispatch();
 
-  useEffect(()=> {
-    if(data) {
-      dispatch(setProfileImage(data.image))
+  useEffect(() => {
+    (async () => {
+      try {
+        const session = await fetchSession();
+        console.log('aaaaaa'); 
+        console.log("local", session.rows._array);
+        if (session?.rows.length) {
+          const user = session.rows._array[0];
+          dispatch(setUser(user));
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
+    })();
+
+  }, []);
+
+  useEffect(() => {
+    if (data) {
+      console.log(data.image);
+      dispatch(setProfileImage(data.image));
     }
-  }, [data])
+  }, [data]);
 
   return (
     <NavigationContainer>{user ? <TabNavigator /> : <AuthStack />}</NavigationContainer>

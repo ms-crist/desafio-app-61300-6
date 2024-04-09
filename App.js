@@ -3,7 +3,7 @@ import { fonts } from "./src/global/fonts";
 import { Provider } from "react-redux";
 import store from "./src/store";
 import MainNavigator from "./src/navigation/MainNavigator";
-
+import { init } from "./src/db";
 /**
  * 
  *  La función 'App' garantiza que las fuentes se carguen antes de renderizar el componente 'MainNavigator'
@@ -12,6 +12,13 @@ import MainNavigator from "./src/navigation/MainNavigator";
  * De lo contrario, devuelve el componente Provider con el store prop y el componente MainNavigator como
  * su componente hijo.
  */
+
+init()
+  .then(()=> console.log("base de datos inicializada"))
+  .catch((err) => {
+    console.log("error")
+    console.log(err);
+  })
 
 export default function App() {
   const [fontsLoaded] = useFonts(fonts);

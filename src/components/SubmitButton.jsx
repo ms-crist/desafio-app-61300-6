@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding: 8,
-        width: '40%'
+        width: '40%',
+        marginLeft: 20
     },
     text: {
         color: colors.blue_100,
